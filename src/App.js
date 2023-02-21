@@ -1,25 +1,24 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import Header from './Components/Header';
+import Input from './Components/Input';
+import Button from './Components/Button';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component{
+
+  // render method (only required method in a class Component)
+  render() {
+
+    // return JSX
+    return (
+      <div id='app-body'>
+        <Header title='Number Guessing Game'/>
+        <Input type='number' min='0' max='100' />
+        <Button  type='button' text='Submit' />
+      </div>
+    );
+  }
+
 }
 
 export default App;
