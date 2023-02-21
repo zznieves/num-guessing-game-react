@@ -7,7 +7,7 @@ function Button(props) {
 
         // React.Fragment allows us to ommit enclosing div Node from DOM tree when rendered
         <React.Fragment>
-            <button type={props.type}>{props.text}</button>
+            <button type={props.type} onClick={props.onClick}> {props.text} </button>
         </React.Fragment>
     );
 }
