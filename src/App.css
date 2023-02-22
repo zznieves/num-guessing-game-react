@@ -33,3 +33,7 @@ div#header {
 
   border-bottom: 3px solid black;
 }
+
+p {
+  text-align: center;
+}
