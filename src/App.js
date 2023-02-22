@@ -3,6 +3,7 @@ import './App.css';
 import Header from './Components/Header';
 import Input from './Components/Input';
 import Button from './Components/Button';
+import { submitGuess } from './Modules/Game';
 
 class App extends React.Component{
 
@@ -17,15 +18,6 @@ class App extends React.Component{
     };
   }
 
-  // event handler for Button onClick event
-  submitGuess() {
-
-    let guess = document.querySelector('input').value;
-
-    // log user input to console
-    console.log(guess);
-  }
-
   // render method (only required method in a class Component)
   render() {
 
@@ -34,7 +26,7 @@ class App extends React.Component{
       <div id='app-body'>
         <Header title='Number Guessing Game'/>
         <Input type='number' min='0' max='100' />
-        <Button  type='button' text='Submit' onClick={this.submitGuess}/>
+        <Button  type='button' text='Submit' onClick={submitGuess}/>
       </div>
     );
   }
